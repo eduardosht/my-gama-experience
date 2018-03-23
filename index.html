@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Working out</title>
+
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+	</head>
+	<body>
+
+		<header>
+			<nav>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Benefits</a></li>
+					<li><a href="">How to</a></li>
+					<li><a href="">Need Help</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="about">
+				<div class="full-screen">
+					<div class="image-background">
+						<img src="./assets/images/working-out.jpg" alt="Working out Background">
+					</div>
+					<div class="image-layer"></div>
+					<div class="info-content">
+						<h1>Working out</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="benefits">
+				<article>
+					<div class="info-content">
+						<h2>Benefits</h2>
+						<div class="benefits-content">
+							<ul>
+								<li>
+									<div>
+										<img src="./assets/images/weight.png" alt="Be stronger">
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+								</li>
+								<li>
+									<div>
+										<img src="./assets/images/running.png" alt="Improved physical condition">
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+								</li>
+								<li>
+									<div>
+										<img src="./assets/images/health.png" alt="Better immune system">
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<section class="howto">
+				<article>
+
+					<div class="image-background">
+						<img src="./assets/images/howto.jpg" alt="Working out Background">
+					</div>
+					<div class="image-layer"></div>
+						
+
+					<div class="info-content">
+						
+						<h2>How to</h2>
+
+						<div class="benefits-content">
+							<ul>
+								<li>
+									<div>
+										<img src="./assets/images/weight.png" alt="Be stronger">
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+								</li>
+								<li>
+									<div>
+										<img src="./assets/images/running.png" alt="Improved physical condition">
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+								</li>
+								<li>
+									<div>
+										<img src="./assets/images/health.png" alt="Better immune system">
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<section class="contact">
+				<article>
+					<div class="info-content">
+						<h2>Contact</h2>
+						<div class="form-box">
+							<form id="main-form" action="http://issuefy.ca.vu/on/login.php" class="form-login"  method="post" />
+								<p>
+									<label for="id">Nome Completo*</label>
+									<input type="text" name="name" id="name" placeholder="Nome Completo" required>
+								</p>
+								<p>
+									<label for="id">E-mail*</label>
+									<input type="email" name="email" id="email" placeholder="E-mail" required>
+								</p>
+								<p>
+									<label for="id">Empresa*</label>
+									<input type="text" name="empresa" id="empresa" placeholder="Empresa" required>
+								</p>
+								<p>
+									<input type="submit" value="Submit">
+								</p>
+							</form>
+						</div>
+					</div>
+				</article>
+			</section>
+
+		</main>
+
+		<footer>
+			Developed by Eduardo Shoiti Fujiwara, São Paulo - Brazil.
+		</footer>
+
+		<script>
+			const form 		= document.getElementById('main-form');
+			const form_el	= form.elements;
+			const nome 		= document.getElementById('name');
+			const email 	= document.getElementById('email');
+			const empresa 	= document.getElementById('empresa');
+
+			let localstorage_name 		= localStorage.getItem('name') ? localStorage.getItem('name') : '';
+			let localstorage_email 		= localStorage.getItem('email') ? localStorage.getItem('email') : '';
+			let localstorage_empresa 	= localStorage.getItem('empresa') ? localStorage.getItem('empresa') : '';
+
+			//localStorage.setItem('items', JSON.stringify(itemsArray));
+			//const data = JSON.parse(localStorage.getItem('items'));
+
+			form.addEventListener('submit', function (e) {
+			  e.preventDefault();
+
+			  
+			  localStorage.setItem( 'name', form_el.namedItem("name").value );
+			  localStorage.setItem( 'email', form_el.namedItem("email").value );
+			  localStorage.setItem( 'empresa', form_el.namedItem("empresa").value );
+			});
+
+		</script>
+
+	</body>
+</html>
