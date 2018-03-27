@@ -24,14 +24,18 @@
 
 		<main>
 			<section class="about">
+				<div class="gamma-certified">
+					<a href="http://gama.academy/" target="_blank">
+						<img src="http://gama.academy/facanacarreira/wp-content/uploads/2016/12/cropped-icon-square.png" alt="Gama Academy Certified">
+					</a>
+				</div>
 				<div class="full-screen">
 					<div class="image-background">
 						<img src="./assets/images/working-out.jpg" alt="Working out Background">
 					</div>
 					<div class="image-layer"></div>
 					<div class="info-content">
-						<h1>Working out</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
+						<h1>Working out Project</h1>
 					</div>
 				</div>
 			</section>
@@ -66,42 +70,22 @@
 				</article>
 			</section>
 
-			<section class="howto">
+			<section class="our-team">
 				<article>
-
-					<div class="image-background">
-						<img src="./assets/images/howto.jpg" alt="Working out Background">
-					</div>
-					<div class="image-layer"></div>
-						
-
-					<div class="info-content">
-						
-						<h2>How to</h2>
-
-						<div class="benefits-content">
-							<ul>
-								<li>
-									<div>
-										<img src="./assets/images/weight.png" alt="Be stronger">
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
-								</li>
-								<li>
-									<div>
-										<img src="./assets/images/running.png" alt="Improved physical condition">
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
-								</li>
-								<li>
-									<div>
-										<img src="./assets/images/health.png" alt="Better immune system">
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt tortor. Nam est massa, bibendum non varius eget, molestie a justo. Mauris vehicula ultrices felis, sit amet tempor purus varius eu. Sed eget posuere neque. Pellentesque nec interdum magna</p>
-								</li>
-							</ul>
-						</div>
-					</div>
+					<ul>
+						<li>
+							<h2> Our Team </h2>
+						</li>
+						<li>
+							<img src="./assets/images/arnold-cuasinegah.jpg" alt="Arnold e suas Negah">
+						</li>
+						<li>
+							<img src="./assets/images/pai-do-cris.jpg" alt="Pai do Cris">
+						</li>
+						<li>
+							<img src="./assets/images/magrao.jpg" alt="Magrão">
+						</li>
+					</ul>
 				</article>
 			</section>
 
@@ -112,19 +96,19 @@
 						<div class="form-box">
 							<form id="main-form" action="https://wezoa.us15.list-manage.com/subscribe/post?u=dfb31543643d34c425405782a&amp;id=1a7e46e86e" class="form-login"  method="post" />
 								<p>
-									<label for="id">Nome Completo*</label>
-									<input type="text"  name="FNAME" id="mce-FNAME" placeholder="Nome Completo" required>
+									<label for="id">Full name*</label>
+									<input type="text"  name="FNAME" id="mce-FNAME" placeholder="Full name" required>
 								</p>
 								<p>
 									<label for="id">E-mail*</label>
 									<input type="email" name="EMAIL" id="mce-EMAIL" placeholder="E-mail" required>
 								</p>
 								<p>
-									<label for="id">Empresa*</label>
-									<input type="text" name="EMP" id="mce-EMP" placeholder="Empresa" required>
+									<label for="id">Company*</label>
+									<input type="text" name="EMP" id="mce-EMP" placeholder="Company" required>
 								</p>
 								<p>
-									<input type="submit" value="Submit" class="submit" disabled>
+									<input type="submit" value="Submit" class="submit" onclick="event.preventDefault(); validateMyForm();">
 								</p>
 								<div id="mce-responses" class="clear">
 									<div class="response" id="mce-error-response" style="display:none"></div>
@@ -143,7 +127,18 @@
 		</footer>
 
 		<script>
+			function validateMyForm() {
 
+				let nameField = document.getElementById("mce-FNAME");
+				
+				/* NOT FULL NAME */
+				if ( nameField.value.length <= 1 ) {
+					alert( 'Please, inform your FULL name' );
+					return true;
+				}
+
+				return false;
+			}
 		</script>
 
 	</body>
