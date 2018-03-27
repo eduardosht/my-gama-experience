@@ -8,20 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 
-
-		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-		  var config = {
-		    apiKey: "AIzaSyDA6I_Mdo8pMCafIt-bXITZQqH85jSUzis",
-		    authDomain: "gamaacademy-386c9.firebaseapp.com",
-		    databaseURL: "https://gamaacademy-386c9.firebaseio.com",
-		    projectId: "gamaacademy-386c9",
-		    storageBucket: "",
-		    messagingSenderId: "419201430459"
-		  };
-		  firebase.initializeApp(config);
-		</script>
 	</head>
 	<body>
 
@@ -138,7 +124,7 @@
 									<input type="text" name="EMP" id="mce-EMP" placeholder="Empresa" required>
 								</p>
 								<p>
-									<input type="submit" value="Submit">
+									<input type="submit" value="Submit" class="submit" disabled>
 								</p>
 								<div id="mce-responses" class="clear">
 									<div class="response" id="mce-error-response" style="display:none"></div>
@@ -153,53 +139,11 @@
 		</main>
 
 		<footer>
-			Developed by Eduardo Shoiti Fujiwara, São Paulo - Brazil.
+			Developed by <strong>Eduardo Shoiti Fujiwara</strong>, São Paulo - Brazil.
 		</footer>
 
 		<script>
 
-			var database = firebase.database();
-
-			let form 		= document.getElementById('main-form');
-			let nome 		= document.getElementById('name');
-			let email 	= document.getElementById('email');
-			let empresa 	= document.getElementById('empresa');
-
-			function writeUserData(name, email, company) {
-				firebase.database().ref('users/' + userId).set( {
-					username: name,
-					email: email,
-					profile_picture : imageUrl
-				});
-			}
-
-			form.addEventListener('submit', function (e) {
-				writeUserData( nome, email, empresa );
-			});
-			
-			/* LOCAL STORAGE 
-			const form 		= document.getElementById('main-form');
-			const form_el	= form.elements;
-			const nome 		= document.getElementById('name');
-			const email 	= document.getElementById('email');
-			const empresa 	= document.getElementById('empresa');
-
-			let localstorage_name 		= localStorage.getItem('name') ? localStorage.getItem('name') : '';
-			let localstorage_email 		= localStorage.getItem('email') ? localStorage.getItem('email') : '';
-			let localstorage_empresa 	= localStorage.getItem('empresa') ? localStorage.getItem('empresa') : '';
-
-			//localStorage.setItem('items', JSON.stringify(itemsArray));
-			//const data = JSON.parse(localStorage.getItem('items'));
-
-			form.addEventListener('submit', function (e) {
-			  e.preventDefault();
-
-			  
-			  localStorage.setItem( 'name', form_el.namedItem("name").value );
-			  localStorage.setItem( 'email', form_el.namedItem("email").value );
-			  localStorage.setItem( 'empresa', form_el.namedItem("empresa").value );
-			});
-			*/
 		</script>
 
 	</body>

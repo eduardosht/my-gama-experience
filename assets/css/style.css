@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+strong {
+    font-weight: bold;
+}
 
 /*********************************/
 
@@ -205,7 +208,7 @@ section.contact h2 {
 .form-box p {
     margin-bottom: 20px;
 }
-.form-box input[type="submit"] {
+.form-box .submit {
     background-color: #000;
     color: #FFF;
     border: 0;
@@ -217,8 +220,26 @@ section.contact h2 {
     border: 1px solid transparent;
     transition: 0.4s all;
 }
-.form-box input[type="submit"]:hover {
+.form-box .submit:hover {
 	background-color: #FFF;
 	color: #000;
 	border: 1px solid #000;
+}
+input:disabled,
+input[disabled]{
+  border: 1px solid #999999 !important;
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    border-top: 1px solid;
 }
