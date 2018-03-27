@@ -8,6 +8,20 @@
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 
+
+		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDA6I_Mdo8pMCafIt-bXITZQqH85jSUzis",
+		    authDomain: "gamaacademy-386c9.firebaseapp.com",
+		    databaseURL: "https://gamaacademy-386c9.firebaseio.com",
+		    projectId: "gamaacademy-386c9",
+		    storageBucket: "",
+		    messagingSenderId: "419201430459"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 	</head>
 	<body>
 
@@ -110,28 +124,32 @@
 					<div class="info-content">
 						<h2>Contact</h2>
 						<div class="form-box">
-							<form id="main-form" action="http://issuefy.ca.vu/on/login.php" class="form-login"  method="post" />
+							<form id="main-form" action="https://wezoa.us15.list-manage.com/subscribe/post?u=dfb31543643d34c425405782a&amp;id=1a7e46e86e" class="form-login"  method="post" />
 								<p>
 									<label for="id">Nome Completo*</label>
-									<input type="text" name="name" id="name" placeholder="Nome Completo" required>
+									<input type="text"  name="FNAME" id="mce-FNAME" placeholder="Nome Completo" required>
 								</p>
 								<p>
 									<label for="id">E-mail*</label>
-									<input type="email" name="email" id="email" placeholder="E-mail" required>
+									<input type="email" name="EMAIL" id="mce-EMAIL" placeholder="E-mail" required>
 								</p>
 								<p>
 									<label for="id">Empresa*</label>
-									<input type="text" name="empresa" id="empresa" placeholder="Empresa" required>
+									<input type="text" name="EMP" id="mce-EMP" placeholder="Empresa" required>
 								</p>
 								<p>
 									<input type="submit" value="Submit">
 								</p>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dfb31543643d34c425405782a_1a7e46e86e" tabindex="-1" value=""></div>
 							</form>
 						</div>
 					</div>
 				</article>
 			</section>
-
 		</main>
 
 		<footer>
@@ -139,6 +157,27 @@
 		</footer>
 
 		<script>
+
+			var database = firebase.database();
+
+			let form 		= document.getElementById('main-form');
+			let nome 		= document.getElementById('name');
+			let email 	= document.getElementById('email');
+			let empresa 	= document.getElementById('empresa');
+
+			function writeUserData(name, email, company) {
+				firebase.database().ref('users/' + userId).set( {
+					username: name,
+					email: email,
+					profile_picture : imageUrl
+				});
+			}
+
+			form.addEventListener('submit', function (e) {
+				writeUserData( nome, email, empresa );
+			});
+			
+			/* LOCAL STORAGE 
 			const form 		= document.getElementById('main-form');
 			const form_el	= form.elements;
 			const nome 		= document.getElementById('name');
@@ -160,8 +199,8 @@
 			  localStorage.setItem( 'email', form_el.namedItem("email").value );
 			  localStorage.setItem( 'empresa', form_el.namedItem("empresa").value );
 			});
-
+			*/
 		</script>
 
 	</body>
-</html>
+</html> 
