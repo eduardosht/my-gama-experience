@@ -143,6 +143,7 @@ section {
     padding: 40px;
     position: relative;
     z-index: 9;
+    box-sizing: border-box;
 }
 .info-content h1 {
     font-size: 110px;
